@@ -43,7 +43,7 @@ export default {
         ref = file.previewElement;
         ref.alt = file.name;
         ref.src = dataUrl;
-        this.fileDroped = false;
+        this.fileNotDroped = false;
       }
     },
     template() {
