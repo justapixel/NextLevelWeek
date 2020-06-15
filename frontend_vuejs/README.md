@@ -1,4 +1,7 @@
-# frontend
+# frontend em vuejs
+<h1 align="center">
+    <img alt="Ecoleta" title="Ecoleta" src=".github/frontend.png" width="220px" />
+</h1>
 
 ## Project setup
 ```
