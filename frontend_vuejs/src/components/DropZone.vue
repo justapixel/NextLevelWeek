@@ -5,6 +5,7 @@
     :include-styling="true"
     :use-custom-slot="true"
     class="dz-message"
+    @vdropzone-file-added="sendFile"
     @vdropzone-thumbnail="thumbnail"
   >
     <p v-show="fileNotDroped">
@@ -26,7 +27,8 @@ export default {
   data() {
     return {
       dropzoneOptions: {
-        url: 'https://httpbin.org/post',
+        url: 'localhost',
+        autoProcessQueue: false,
         previewTemplate: this.template(),
         thumbnailWidth: null,
         thumbnailHeight: null,
@@ -50,6 +52,9 @@ export default {
       return `
         <img src="aaaa" alt="Point Thumbnail" class="dz-message"/>
       `;
+    },
+    sendFile(file) {
+      this.$emit('fileSelected', file);
     },
   },
 };
